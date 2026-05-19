@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>solutions</title>
+  </head>
+  <body class="page__body">
+    @include('partials/head.html')
+
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="contact">
+          <div class="container">
+            <div class="contact__wrapp">
+              <div class="contact__us">
+                <div class="contact__info">
+                  <div class="contact__offices">
+                    <div class="contact__office">
+                      <h3>Москва</h3>
+                      <p>Московский офис: Дзержинский</p>
+                      <a href="#">info@trans-turbo.com</a>
+                    </div>
+                    <div class="contact__office">
+                      <h3>Кавказский офис</h3>
+                      <p>Казанский офис: Пятигорск</p>
+                      <a href="#">info@trans-turbo.com</a>
+                    </div>
+                  </div>
+                  <p>
+                    Мы готовы помочь вам с любыми вопросами по перевозке и
+                    логистике. Для получения консультации или уточнения деталей
+                    по заказу, пожалуйста, заполните форму, и наши специалисты
+                    свяжутся с вами в ближайшее время
+                  </p>
+                </div>
+                <div class="contact__wrapper">
+                  <h2 class="contact__title">Связаться с нами</h2>
+                  <form action="">
+                    <div class="contact__form">
+                      <div class="contact__field">
+                        <label for="name" class="contact__label">Имя *</label>
+                        <input
+                          type="text"
+                          class="contact__input"
+                          placeholder="Полное имя *"
+                          refielduired
+                        />
+                      </div>
+                      <div class="contact__field">
+                        <label for="name" class="contact__label"
+                          >Адрес электронной почты *</label
+                        >
+                        <input
+                          type="email"
+                          class="contact__input"
+                          placeholder="example@gmail.com  "
+                          refielduired
+                        />
+                      </div>
+                      <div class="contact__field">
+                        <label for="tel" class="contact__label"
+                          >Телефон *</label
+                        >
+                        <input
+                          type="text"
+                          class="contact__input"
+                          placeholder="8(999)-000-00-00"
+                          refielduired
+                        />
+                      </div>
+                    </div>
+                    <button type="button" class="contact__btn btn-reset">
+                      Отправить
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae9a7dcd6498929cf838f1d63786563b0639393c7502a72abce94992cf846cabc&amp;source=constructor" width="1280" height="700" frameborder="0"></iframe>
+            </div>
+          </div>
+        </section>
+        @include('partials/career.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>
