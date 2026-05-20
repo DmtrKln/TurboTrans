@@ -1,5 +1,5 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 99999;
   width: 100%;
@@ -9,10 +9,6 @@
 
   @include laptop {
     background-color: transparent;
-  }
-
-  @include tablet {
-    position: fixed;
   }
 
   &__cross {
@@ -189,12 +185,27 @@
     color: $white;
     background-color: $dark_blue;
     border-radius: 20px;
-    padding: 8px 16px;
+    padding: 7px 25px;
     white-space: nowrap;
     transition: 0.3s ease;
+    border: 1px solid transparent;
 
     &:hover {
-      opacity: 0.8;
+      border: 1px solid $black;
+      background-color: $white;
+      color: $dark_blue;
+    }
+
+    &:active {
+      background-color: $sl_blue;
+      color: $dark_blue;
+      border: 1px solid transparent;
+    }
+
+    &:focus:not(:active) {
+      color: $white;
+      background-color: $dark_blue;
+      border: 1px solid transparent;
     }
   }
 
