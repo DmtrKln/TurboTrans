@@ -16,21 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     breakpoints: {
       0: {
-        slidesPerView: 1.1,
-      },
-      360: {
-        slidesPerView: 1.2,
-      },
-      480: {
-        slidesPerView: 1.5,
+        slidesPerView: 1,
       },
       768: {
-        slidesPerView: 2.5,
+        slidesPerView: 2,
       },
       1024: {
         slidesPerView: 3,
       },
-      1280: {
+      1440: {
         slidesPerView: 4,
       },
     },
@@ -67,7 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
       768: {
         slidesPerView: 2,
       },
-      1024: {
+      1200:{
+        slidesPerView: 2,
+      },
+      1300: {
         slidesPerView: 3,
       },
     },

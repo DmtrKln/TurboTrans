@@ -46,8 +46,4 @@
     @content;
   }
 }
-@mixin above-desktop {
-  @media (min-width: (1921px)) and (max-width: (2560px)) {
-    @content;
-  }
-}
+
