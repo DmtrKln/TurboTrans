@@ -12,12 +12,6 @@
   }
 }
 
-@mixin non-standarte {
-  @media (max-width: (1580px)) {
-    @content;
-  }
-}
-
 @mixin laptop {
   @media (max-width: (1440px)) {
     @content;
@@ -41,9 +35,3 @@
     @content;
   }
 }
-@mixin largr-desktop{
-  @media (max-width: (1920px)) {
-    @content;
-  }
-}
-

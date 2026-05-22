@@ -12,6 +12,7 @@
   }
 
   &__cross {
+    width: 35px;
     display: none;
   }
 
@@ -201,8 +202,8 @@
     }
 
     &:active {
-      background-color: $sl_blue;
-      color: $dark_blue;
+      background-color: #296198;
+      color: $white;
       border: 1px solid transparent;
     }
 
@@ -215,7 +216,6 @@
 
   &__burger,
   &__cross {
-    width: 25px;
     height: auto;
     flex-shrink: 0;
     cursor: pointer;
@@ -228,6 +228,7 @@
   }
 
   &__burger {
+    width: 25px;
     display: none;
 
     @include maxdesktop {
@@ -275,13 +276,31 @@
   &__mobileBtn {
     display: block;
     width: fit-content;
-    padding: 10px 80px;
+    padding: 10px 30px;
     font-weight: 500;
     font-size: 24px;
     font-family: $font-family;
     color: $white;
     background-color: $dark_blue;
     border-radius: 20px;
+
+    &:hover {
+      border: 1px solid $black;
+      background-color: $white;
+      color: $dark_blue;
+    }
+
+    &:active {
+      background-color: $gray;
+      color: $white;
+      border: 1px solid transparent;
+    }
+
+    &:focus:not(:active) {
+      color: $white;
+      background-color: $dark_blue;
+      border: 1px solid transparent;
+    }
   }
 
   &__mobileInfo {

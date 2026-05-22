@@ -3,7 +3,6 @@
   padding: 225px 0 465px 0;
   overflow: hidden;
 
-
   @include mobile {
     margin: 0 0 90px 0;
     padding: 0;
@@ -28,13 +27,17 @@
   &__topTitle {
     margin-bottom: 15px;
     text-transform: uppercase;
-    font-family: $font-family;
+    font-family: $second-family;
     font-weight: 700;
     font-size: 90px;
     color: $dark_blue;
 
-    @include tablet{
-      font-size: 80px;
+    @include laptop {
+      font-size: 75px;
+    }
+
+    @include small-tablet {
+      font-size: 60px;
     }
 
     @include mobile {
@@ -67,6 +70,8 @@
     transition: opacity 0.3s ease;
     position: relative;
     font-variant: small-caps;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
 
     &:hover {
       border: 1px solid $black;
@@ -77,13 +82,11 @@
     &:active {
       background-color: $gray;
       color: $white;
-      border: 1px solid transparent;
     }
 
     &:focus:not(:active) {
       color: $white;
       background-color: $dark_blue;
-      border: 1px solid transparent;
     }
 
     @include mobile {
@@ -94,7 +97,7 @@
 
   &__top {
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
 
     @include maxdesktop {
       max-width: max-content;
@@ -116,7 +119,7 @@
 
   &__line {
     position: absolute;
-    top: -10%;
+    top: 8%;
     left: 0;
     z-index: -1;
     width: 100%;
@@ -303,7 +306,7 @@
       color: $gray;
       font-family: $font-family;
 
-      @include small-tablet {
+      @include mobile {
         font-weight: 400;
         font-size: 16px;
         line-height: 156%;
@@ -314,7 +317,7 @@
   &__bottomLeft {
     width: calc(100% - 50px);
 
-    @include small-tablet {
+    @include mobile {
       width: 100%;
     }
   }
@@ -365,6 +368,10 @@
       color: $dark_blue;
       max-width: 520px;
 
+      @include maxdesktop {
+        max-width: none;
+      }
+
       @include mobile {
         font-size: 24px;
       }
@@ -381,6 +388,8 @@
       font-family: $font-family;
       white-space: nowrap;
       cursor: pointer;
+      transition: 0.3s ease;
+      border: 1px solid transparent;
 
       &:hover {
         border: 1px solid $black;
@@ -391,13 +400,11 @@
       &:active {
         background-color: $sl_blue;
         color: $dark_blue;
-        border: 1px solid transparent;
       }
 
       &:focus:not(:active) {
         color: $white;
         background-color: $dark_blue;
-        border: 1px solid transparent;
       }
 
       @include tablet {
@@ -433,7 +440,8 @@
 
   &__btnMobile {
     display: none;
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
 
     &:hover {
       border: 1px solid $black;
@@ -444,13 +452,11 @@
     &:active {
       background-color: $sl_blue;
       color: $dark_blue;
-      border: 1px solid transparent;
     }
 
     &:focus:not(:active) {
       color: $white;
       background-color: $dark_blue;
-      border: 1px solid transparent;
     }
 
     @include tablet {
@@ -503,7 +509,9 @@
     transition: all 0.4s ease;
 
     img {
+      aspect-ratio: 300/390;
       width: 100%;
+      max-height: 390px;
       display: block;
       margin-bottom: 20px;
       border-radius: 20px;
@@ -511,7 +519,7 @@
 
     h4 {
       font-weight: 500;
-      font-size: 20px;
+      font-size: 27px;
       color: $dark_blue;
       margin: 0 0 20px 0;
 
@@ -621,7 +629,7 @@
       font-size: 24px;
       color: $dark_blue;
 
-      @include small-tablet {
+      @include mobile {
         font-size: 18px;
       }
     }
@@ -682,9 +690,9 @@
 
 .keyAreas {
   margin: 180px 0 125px 0;
-  
-  @include mobile{
-    margin: 60px 0 60px 0
+
+  @include mobile {
+    margin: 60px 0 60px 0;
   }
 
   &__title {
@@ -792,7 +800,7 @@
     margin-bottom: 90px;
   }
 
-  @include mobile{
+  @include mobile {
     margin: 60px 0 60px 0;
   }
 
@@ -932,6 +940,7 @@
     margin-left: 95px;
 
     @include mobile {
+      margin: 0;
       font-size: 14px;
       line-height: 180%;
     }
@@ -944,7 +953,7 @@
     top: 0;
     right: -160px;
 
-    @include laptop{
+    @include laptop {
       top: -35px;
       width: 70%;
       right: -200px;
@@ -976,14 +985,13 @@
     }
   }
 
-  &__mapEurope,
-  &__mapChina,
-  &__mapTurkey {
+  &__mapEurope, &__mapChina, &__mapTurkey {
     path {
       transition: 0.3s all ease;
-    }
-    .active {
-      fill: $dark_blue;
+
+      &.active {
+        fill: $dark_blue;
+      }
     }
   }
 }
@@ -1049,7 +1057,7 @@
       text-align: center;
       margin-bottom: 40px;
 
-      @include small-tablet {
+      @include mobile {
         text-align: left;
         font-size: 24px;
         margin-bottom: 30px;
@@ -1063,7 +1071,7 @@
       line-height: 167%;
       text-align: center;
       margin-bottom: 35px;
-      @include small-tablet {
+      @include mobile {
         text-align: left;
         font-size: 16px;
         line-height: 156%;
@@ -1089,8 +1097,8 @@
       }
 
       &:active {
-        background-color: $sl_blue;
-        color: $dark_blue;
+        background-color: #296198;
+        color: $white;
         border: 1px solid transparent;
       }
 
@@ -1171,7 +1179,7 @@
     gap: 90px;
     max-width: 1070px;
 
-    @include mobile{
+    @include mobile {
       gap: 75px;
     }
   }
@@ -1278,8 +1286,8 @@
 
 .benefits {
   margin: 230px 0 70px 0;
-  
-  @include tablet{
+
+  @include tablet {
     margin: 115px 0 70px 0;
   }
 
@@ -1367,7 +1375,6 @@
     @include mobile {
       width: 100%;
       max-width: 400px;
-
     }
 
     img {
@@ -1536,6 +1543,8 @@
     letter-spacing: 0.01em;
     text-align: center;
     color: $white;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
 
     &:hover {
       border: 1px solid $black;
@@ -1546,13 +1555,11 @@
     &:active {
       background-color: $sl_blue;
       color: $dark_blue;
-      border: 1px solid transparent;
     }
 
     &:focus:not(:active) {
       color: $white;
       background-color: $dark_blue;
-      border: 1px solid transparent;
     }
   }
 }
@@ -1560,7 +1567,7 @@
 .solutions {
   margin: 100px 0 60px 0;
 
-  @include mobile{
+  @include mobile {
     margin: 90px 0 50px 0;
   }
 
@@ -1577,7 +1584,7 @@
       flex-wrap: wrap;
     }
 
-    @include mobile{
+    @include mobile {
       margin-bottom: 50px;
     }
   }
@@ -1603,7 +1610,7 @@
     text-transform: uppercase;
     line-height: 130%;
 
-    @include tablet{
+    @include tablet {
       font-size: 55px;
     }
 
@@ -1704,7 +1711,7 @@
 .contact {
   margin: 240px 0 80px 0;
 
-  @include mobile{
+  @include mobile {
     margin: 115px 0 60px 0;
   }
 
@@ -1879,7 +1886,7 @@
     outline: none;
     border: none;
 
-    @include mobile{
+    @include mobile {
       border-radius: 6px;
     }
   }
@@ -1913,6 +1920,8 @@
     letter-spacing: 0.01em;
     text-align: center;
     color: $white;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
 
     &:hover {
       border: 1px solid $black;
@@ -1923,13 +1932,11 @@
     &:active {
       background-color: $sl_blue;
       color: $dark_blue;
-      border: 1px solid transparent;
     }
 
     &:focus:not(:active) {
       color: $white;
       background-color: $dark_blue;
-      border: 1px solid transparent;
     }
   }
 

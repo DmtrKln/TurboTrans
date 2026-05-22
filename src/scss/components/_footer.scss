@@ -1,21 +1,20 @@
 .footer {
-    padding: 55px 0 50px 0;
-    background-color: $dark_blue;
-    overflow: hidden;
-    background-position: center right;
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-@media (max-width:1500px){
-    background-image: none !important; 
-}
+  padding: 55px 0 50px 0;
+  background-color: $dark_blue;
+  overflow: hidden;
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
 
+  @media (max-width: 1500px) {
+    background-image: none !important;
+  }
 
-&__wrap{
+  &__wrap {
     position: relative;
-}
+  }
 
-&__truck{
+  &__truck {
     position: absolute;
     top: 0;
     left: 100px;
@@ -23,222 +22,204 @@
 
     display: none;
 
-    @include tablet{
-        display: block;
+    @include tablet {
+      display: block;
     }
-}
+  }
 
-&__logo {
+  &__logo {
     display: block;
     position: relative;
     z-index: 1;
     max-width: 100px;
-}
+  }
 
-&__about {
+  &__about {
     display: flex;
-    align-items: start;
-    gap: 65px;
-
-    @include tablet {
-        position: relative;
-        z-index: 1;
-        flex-direction: column;
-        gap: 40px;
-    }
-}
-
-&__nav{
-    margin-bottom: 40px;
-}
-
-&__menu {
-    display: flex;
-    gap: 65px;
+    align-items: center;
     margin-bottom: 110px;
+    gap: 65px;
 
     @include tablet {
-        flex-direction: column;
-        gap: 15px;
-        margin-bottom: 40px;
-        position: relative;
-        z-index: 1;
+      position: relative;
+      z-index: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    @include mobile{
+      margin-bottom: 75px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 65px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 15px;
+      position: relative;
+      z-index: 1;
     }
 
     li a {
-        font-family: $font-family;
-        color: $white;
-        font-weight: 500;
-        font-size: 18px;
+      font-family: $font-family;
+      color: $white;
+      font-weight: 500;
+      font-size: 18px;
 
-        @include tablet {
-            margin-bottom: 15px;
-        }
+      @include tablet {
+        margin-bottom: 15px;
+      }
+
+      &:hover{
+        color: #a3a3a3;
+      }
     }
-}
+  }
 
-    &__info {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 600px;
-        gap: 20px;
-        margin-bottom: 25px;
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+    gap: 25px;
+    margin-bottom: 40px;
 
-        @media(max-width:1250px){
-            max-width: 500px;
-        }
-
-        p {
-            color: $white;
-            font-weight: 500;
-            font-size: 18px;
-        }
-
-        @include tablet {
-            flex-direction: column;
-            gap: 15px;
-            max-width: 100%;
-            margin-bottom: 35px;
-
-        }
-
-        @include small-tablet{
-            p {
-                font-size: 16px;
-            }
-        }
-
+    @media (max-width: 1250px) {
+      max-width: 500px;
     }
 
-    &__emailDesktop{
-
-        @include tablet{
-
-            display: none;
-        }
+    p {
+      color: $white;
+      font-weight: 500;
+      font-size: 18px;
     }
 
-    &__emailMobil{
-        display: none;
-
-        @include tablet{
-
-            display: block;
-            font-family: $font-family;
-            color: $white;
-            margin-top: 25px;
-        }
-
-        @include small-tablet{
-            font-weight: 500;
-            font-size: 18px;
-        }
+    @include tablet {
+      flex-direction: column;
+      gap: 15px;
+      max-width: 100%;
+      margin-bottom: 35px;
     }
 
-    &__socialInfo {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        margin-bottom: 60px;
-        gap: 40px;
+    @include mobile {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
 
-        p {
-            font-family: $font-family;
-            color: $white;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 100%;
-        }
+  &__emailDesktop {
+    @include tablet {
+      display: none;
+    }
+  }
 
-        @include tablet {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 60px;
-        }
+  &__emailMobil {
+    display: none;
 
-        @include small-tablet{
-            p{
-                font-weight: 300;
-            }
-        }
+    @include tablet {
+      display: block;
+      font-family: $font-family;
+      color: $white;
+      margin-top: 20px;
     }
 
-    &__social {
-        display: flex;
-        align-items: center;
-        gap: 15px;
+    @include mobile {
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
 
-        }
-    
+  &__socialInfo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 95px;
+    gap: 40px;
 
-    &__copyright {
-        display: flex;
-        gap: 55px;
-
-        p:first-of-type {
-            font-family: $font-family;
-            color: $white;
-            font-weight: 300;
-            font-size: 16px;
-        }
-
-        p {
-            font-family: $font-family;
-            color: $white;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 100%;
-            text-align: right;
-        }
-
-        @include tablet {
-            flex-direction: column;
-            gap: 15px;
-
-            p {
-                text-align: left;
-                font-size: 14px;
-            }
-        }
-
-        @media(max-width:1250px){
-            flex-direction: column;
-            align-items: start;
-            gap: 15px;
-        }
+    p {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
     }
 
-    &__truckDesktop{
-        position: absolute;
-        top: -53px;
-        left: 650px;
-
-        @include maxdesktop{
-            left: 550px;
-        }
-        @include tablet{
-            display: none;
-        }
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 60px;
     }
 
-    &__truckMobile{
-
-        position: absolute;
-
-        display: none;
-
-        @include tablet{
-            display: block;
-            top: 0;
-            left: 350px;
-        }
-        @include small-tablet{
-            left: 260px;
-        }
-        @include mobile{
-            left: 140px;
-        }
+    @include mobile {
+      p {
+        font-weight: 300;
+      }
     }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__copyright {
+    display: flex;
+    gap: 55px;
+
+    p {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 100%;
+
+      @include mobile {
+        text-align: left;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__truckDesktop {
+    position: absolute;
+    top: -53px;
+    left: 650px;
+
+    @include maxdesktop {
+      left: 550px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__truckMobile {
+    position: absolute;
+
+    display: none;
+
+    @include tablet {
+      display: block;
+      top: 0;
+      left: 350px;
+    }
+    @include small-tablet {
+      left: 260px;
+    }
+    @include mobile {
+      left: 140px;
+    }
+  }
 }
