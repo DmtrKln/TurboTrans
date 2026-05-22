@@ -985,7 +985,9 @@
     }
   }
 
-  &__mapEurope, &__mapChina, &__mapTurkey {
+  &__mapEurope,
+  &__mapChina,
+  &__mapTurkey {
     path {
       transition: 0.3s all ease;
 
@@ -1089,6 +1091,7 @@
       font-size: 18px;
       font-variant: small-caps;
       transition: opacity 0.3s ease;
+      border: 1px solid transparent;
 
       &:hover {
         border: 1px solid $black;
@@ -1099,13 +1102,11 @@
       &:active {
         background-color: #296198;
         color: $white;
-        border: 1px solid transparent;
       }
 
       &:focus:not(:active) {
         color: $white;
         background-color: $dark_blue;
-        border: 1px solid transparent;
       }
 
       @include small-tablet {
