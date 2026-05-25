@@ -370,10 +370,8 @@ const mapClasses = [
 
 mapClasses.forEach((block) => {
   const selector = document.querySelectorAll(block);
-  console.log(selector);
   selector.forEach((item) => {
     item.addEventListener("mouseenter", () => {
-      console.log(selector);
       selector.forEach((i) => {
         i.querySelector("path").classList.add("active");
       });
