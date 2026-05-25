@@ -994,6 +994,10 @@
       &.active {
         fill: $dark_blue;
       }
+
+      @include tablet {
+        fill: $dark_blue;
+      }
     }
   }
 }
@@ -1121,12 +1125,12 @@
   margin: 215px 0 80px 0;
 
   @include tablet {
-    background-image: url(../img/main/backgroundAbout.png);
+    background-image: url(../img/main-services/backgroundAbout.png);
     margin: 100px 0 30px 0;
   }
 
   &__title {
-    background-image: url(../img/main/backgroundAbout.png);
+    background-image: url(../img/main-services/backgroundAbout.png);
     position: relative;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -1375,7 +1379,6 @@
 
     @include mobile {
       width: 100%;
-      max-width: 400px;
     }
 
     img {
@@ -1566,7 +1569,7 @@
 }
 
 .solutions {
-  margin: 100px 0 60px 0;
+  margin: 195px 0 60px 0;
 
   @include mobile {
     margin: 90px 0 50px 0;
@@ -1696,14 +1699,6 @@
     background: $dark_blue;
     transition: width 0.4s ease;
     border-radius: 2px;
-  }
-
-  .solutions__slider .swiper-slide {
-    transition: width 0.4s ease;
-  }
-
-  .solutions__slider .swiper-slide.is-active {
-    width: calc(var(--slide-width) * 1.5) !important;
   }
 }
 

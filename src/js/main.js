@@ -1,3 +1,4 @@
+Fancybox.bind("[data-fancybox]", {});
 const servicesSwiper = new Swiper(".services__slider", {
   slidesPerView: 4,
   spaceBetween: 40,

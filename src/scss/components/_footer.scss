@@ -113,6 +113,11 @@
   }
 
   &__emailDesktop {
+    cursor: pointer;
+    font-family: $font-family;
+    color: $white;
+    font-weight: 500;
+    font-size: 18px;
     @include tablet {
       display: none;
     }
@@ -122,6 +127,7 @@
     display: none;
 
     @include tablet {
+      cursor: pointer;
       display: block;
       font-family: $font-family;
       color: $white;
