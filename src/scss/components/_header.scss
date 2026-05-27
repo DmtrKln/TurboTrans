@@ -121,7 +121,7 @@
       max-width: 1075px;
       position: absolute;
       top: 110%;
-      left: -45px;
+      left: -5px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -197,12 +197,12 @@
 
     &:hover {
       border: 1px solid $black;
+      color: $dark_blue !important;
       background-color: $white;
-      color: $dark_blue;
     }
 
     &:active {
-      background-color: #296198;
+      background-color: $sl_blue;
       color: $white;
       border: 1px solid transparent;
     }
@@ -390,6 +390,7 @@
     padding: 8px 55px;
     background: transparent;
     color: $white;
+    cursor: pointer;
 
     &:hover {
       border: 1px solid $black;

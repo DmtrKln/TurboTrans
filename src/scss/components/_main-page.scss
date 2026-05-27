@@ -4,8 +4,8 @@
   overflow: hidden;
 
   @include mobile {
-    margin: 0 0 90px 0;
-    padding: 0;
+    margin: 0 0 50px 0;
+    padding: 0 0 30px 0;
   }
 
   &__wrap {
@@ -60,6 +60,7 @@
   }
 
   &__btn {
+    display: inline-block;
     padding: 15px 65px;
     background-color: $dark_blue;
     border-radius: 20px;
@@ -150,6 +151,7 @@
   @include mobile {
     margin: 0px 0 60px 0;
   }
+
   &__wrapTop {
     display: flex;
     gap: 90px;
@@ -158,12 +160,15 @@
       display: block;
     }
   }
+
   &__text {
     width: calc(80% - 44px);
+
     @include tablet {
       width: 100%;
     }
   }
+
   &__title {
     margin-bottom: 40px;
     font-family: $font-family;
@@ -175,6 +180,7 @@
       font-size: 24px;
     }
   }
+
   &__desc {
     max-width: 930px;
     width: 100%;
@@ -189,18 +195,22 @@
       line-height: 156%;
     }
   }
+
   &__cards {
     display: flex;
     flex-wrap: wrap;
     gap: 60px 20px;
     justify-content: space-between;
+
     @include tablet {
       margin-top: 65px;
     }
+
     @include mobile {
       gap: 40px 20px;
     }
   }
+
   &__card {
     width: calc(50% - 10px);
 
@@ -208,6 +218,7 @@
       width: calc(50% - 10px);
     }
   }
+
   &__cardTitle {
     color: $dark_blue;
     font-weight: 500;
@@ -219,6 +230,7 @@
       font-size: 24px;
     }
   }
+
   &__cardAbout {
     margin-bottom: 20px;
     font-weight: 500;
@@ -231,6 +243,7 @@
       font-size: 14px;
     }
   }
+
   &__cardWhat {
     color: $gray;
     font-weight: 400;
@@ -322,6 +335,7 @@
     }
   }
 }
+
 .services {
   margin: 205px 0 165px 0;
 
@@ -331,6 +345,7 @@
 
   &__title {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     gap: 30px;
@@ -363,6 +378,7 @@
     }
 
     h3 {
+      font-family: $font-family;
       font-weight: 700;
       font-size: 40px;
       color: $dark_blue;
@@ -380,6 +396,7 @@
     button {
       padding: 16px 50px;
       font-weight: 400;
+      font-family: $font-family;
       font-size: 18px;
       font-variant: small-caps;
       color: $white;
@@ -439,6 +456,10 @@
   }
 
   &__btnMobile {
+    font-family: $font-family;
+    font-size: 16px;
+    color: $white;
+    font-variant: small-caps;
     display: none;
     transition: 0.3s ease;
     border: 1px solid transparent;
@@ -470,6 +491,7 @@
       padding: 10px 45px;
       background: $dark_blue;
     }
+
     @include mobile {
       font-size: 16px;
     }
@@ -503,6 +525,7 @@
   }
 
   &__card {
+    font-family: $font-family;
     padding: 15px 15px 40px 15px;
     border-radius: 20px;
     background: #e9e9e9;
@@ -518,6 +541,7 @@
     }
 
     h4 {
+      font-family: $font-family;
       font-weight: 500;
       font-size: 27px;
       color: $dark_blue;
@@ -530,6 +554,7 @@
     }
 
     p {
+      font-family: $font-family;
       font-weight: 300;
       font-size: 18px;
       color: $gray;
@@ -577,6 +602,7 @@
         margin-bottom: 25px;
       }
     }
+
     p {
       text-align: center;
       font-weight: 500;
@@ -623,7 +649,7 @@
       padding: 20px 15px 20px 15px;
     }
 
-    a {
+    h4 {
       font-family: $font-family;
       font-weight: 400;
       font-size: 24px;
@@ -756,7 +782,7 @@
   }
 
   &__card {
-    max-height: 300px;
+    height: auto;
     padding: 90px 70px;
     border-radius: 20px;
     background-color: #d5e4f2;
@@ -773,6 +799,7 @@
       color: $dark_blue;
       margin-bottom: 20px;
     }
+
     p {
       font-family: $font-family;
       font-weight: 400;
@@ -1015,11 +1042,13 @@
     position: relative;
     padding: 20px 0;
   }
+
   &__infiniteSlider {
     display: flex;
     flex-wrap: nowrap;
     will-change: transform;
   }
+
   &__sliderItem {
     flex: 0 0 auto;
     margin-right: 70px;
@@ -1069,6 +1098,7 @@
         margin-bottom: 30px;
       }
     }
+
     p {
       color: $dark_blue;
       font-family: $font-family;
@@ -1077,6 +1107,7 @@
       line-height: 167%;
       text-align: center;
       margin-bottom: 35px;
+
       @include mobile {
         text-align: left;
         font-size: 16px;
@@ -1084,39 +1115,46 @@
         margin-bottom: 30px;
       }
     }
-    a {
-      display: inline-flex;
-      background-color: $dark_blue;
+
+
+  }
+
+  &__email {
+    color: $dark_blue
+  }
+
+  &__btn {
+    display: inline-flex;
+    background-color: $dark_blue;
+    color: $white;
+    font-family: $font-family;
+    border-radius: 20px;
+    padding: 15px 82px;
+    font-weight: 400;
+    font-size: 18px;
+    font-variant: small-caps;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid $black;
+      background-color: $white;
+      color: $dark_blue;
+    }
+
+    &:active {
+      background-color: #296198;
       color: $white;
-      font-family: $font-family;
-      border-radius: 20px;
-      padding: 15px 82px;
-      font-weight: 400;
-      font-size: 18px;
-      font-variant: small-caps;
-      transition: opacity 0.3s ease;
-      border: 1px solid transparent;
+    }
 
-      &:hover {
-        border: 1px solid $black;
-        background-color: $white;
-        color: $dark_blue;
-      }
+    &:focus:not(:active) {
+      color: $white;
+      background-color: $dark_blue;
+    }
 
-      &:active {
-        background-color: #296198;
-        color: $white;
-      }
-
-      &:focus:not(:active) {
-        color: $white;
-        background-color: $dark_blue;
-      }
-
-      @include small-tablet {
-        font-size: 16px;
-        padding: 15px 85px;
-      }
+    @include small-tablet {
+      font-size: 16px;
+      padding: 15px 85px;
     }
   }
 }

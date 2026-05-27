@@ -1,6 +1,5 @@
 $font-family: "Readex Pro", sans-serif;
-$second-family: "Toxigenesis", "sans-serif";
-
+$second-family: "Toxigenesis", sans-serif;
 $white: #ffffff;
 $black: #000000;
 $dark_blue: #061c35;
@@ -12,4 +11,6 @@ $sl_blue: #d5e4f2;
   --content-width: 1666px;
   --container-offset: 20px;
   --container-width: var(--content-width);
+  --font-family: $font-family;
+  --second-family: $second-family;
 }
