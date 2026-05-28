@@ -576,7 +576,7 @@
 }
 
 .directions {
-  margin: 165px 0 180px 0;
+  margin: 125px 0 180px 0;
 
   @include mobile {
     margin: 60px 0 60px 0;
@@ -588,7 +588,7 @@
   }
 
   &__top {
-    h4 {
+    h2 {
       font-weight: 700;
       font-size: 40px;
       text-align: center;
@@ -650,7 +650,7 @@
       padding: 20px 15px 20px 15px;
     }
 
-    h4 {
+    h3 {
       font-family: $font-family;
       font-weight: 400;
       font-size: 24px;
@@ -1085,7 +1085,7 @@
   &__create {
     text-align: center;
 
-    h4 {
+    h2 {
       color: $dark_blue;
       font-family: $font-family;
       font-weight: 700;
@@ -1161,36 +1161,40 @@
 }
 
 .hero {
-  margin: 215px 0 80px 0;
+  margin: 140px 0 80px 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 
   @include tablet {
-    background-image: url(../img/main-services/backgroundAbout.png);
-    margin: 100px 0 30px 0;
+    margin: 100px 0 50px 0; 
   }
 
-  &__title {
-    background-image: url(../img/main-services/backgroundAbout.png);
+  &__wrapp {
+    border-radius: 30px;
     position: relative;
-    background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     min-height: 640px;
 
     @include tablet {
+      height: 100%;
       display: flex;
       align-items: end;
-      padding: 0 0 25px 0;
+      padding: 280px 0 50px 0;
     }
 
-    h4 {
+    h1 {
       position: absolute;
       font-family: $font-family;
       color: $white;
       font-weight: 700;
       font-size: 60px;
       text-transform: uppercase;
-      width: 790px;
+      max-width: 790px;
+      width: 100%;
       left: 140px;
       bottom: 45px;
 
@@ -1220,17 +1224,17 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    gap: 90px;
+    gap: 80px;
     max-width: 1070px;
 
     @include mobile {
-      gap: 75px;
+      gap: 60px;
     }
   }
 
   &__text {
     h2 {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       font-family: $font-family;
       color: $dark_blue;
       font-weight: 700;
@@ -1329,7 +1333,7 @@
 }
 
 .benefits {
-  margin: 230px 0 70px 0;
+  margin: 195px 0 70px 0;
 
   @include tablet {
     margin: 115px 0 70px 0;
@@ -1392,7 +1396,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px 30px;
-    justify-content: center;
     color: $gray;
 
     @include mobile {
@@ -1418,6 +1421,7 @@
 
     @include mobile {
       width: 100%;
+      padding: 15px 10px 25px 10px;
     }
 
     img {
@@ -1434,6 +1438,7 @@
 
   &__cardTitle {
     margin-bottom: 20px;
+    padding: 0 0px 0 20px;
     max-width: 230px;
     font-family: $font-family;
     color: $dark_blue;
@@ -1445,39 +1450,40 @@
       margin-bottom: 15px;
       font-size: 21px;
       max-width: 100%;
+      padding: 0;
     }
   }
 
   &__cardDesc {
-    margin-bottom: 25px;
+    padding: 0 30px 0 20px;
     font-family: $font-family;
     color: #0a2541;
     font-weight: 300;
     font-size: 18px;
     line-height: 130%;
-    margin-right: 40px;
+    margin-bottom: 25px;
 
     @include mobile {
+      padding: 0;
       margin-bottom: 40px;
       font-size: 16px;
     }
   }
 
   &__cardMore {
-    display: flex;
-    margin-left: auto;
-    align-self: self-end;
+    text-align: end;
+    margin-right: 8px;
     font-family: $font-family;
     font-weight: 400;
     font-size: 18px;
     color: #0a2541;
-    margin-right: 18px;
     text-decoration-line: underline;
     text-decoration-style: dotted;
     text-decoration-color: #0a2541;
 
     @include mobile {
       font-size: 18px;
+      margin: 0;
     }
   }
 }
@@ -1587,6 +1593,7 @@
     border-radius: 25px;
     margin: 0 auto;
     max-width: 630px;
+    font-family: $font-family;
     background-color: $dark_blue;
     font-weight: 700;
     font-size: 18px;
@@ -1720,6 +1727,8 @@
   }
 
   &__card {
+    cursor: pointer;
+
     img {
       width: 100%;
     }
@@ -1830,7 +1839,7 @@
       gap: 60px;
     }
 
-    h3 {
+    h2 {
       font-family: $font-family;
       color: $dark_blue;
       font-weight: 600;
